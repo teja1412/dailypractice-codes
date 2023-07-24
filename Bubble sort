@@ -1,3 +1,6 @@
+# For i th pass we are getting i greatest elements. 
+# If we need a specific number of largest elements, then we can iterate the first loop that many number of times.
+
 class Solution:
     def bubbleSort(self,arr, n):
         flag=0
@@ -11,7 +14,3 @@ class Solution:
             if(flag==0):
               break
         return arr
-
-
-# For i th pass we are getting i greatest elements. 
-# If we need a specific number of largest elements, then we can iterate the first loop that many number of times.
