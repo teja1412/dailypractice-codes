@@ -1,11 +1,15 @@
 class Solution:
     def bubbleSort(self,arr, n):
+        flag=0
         # n-1 passes will be required.
         for i in range(n-1):
             # In every iteration of j we get i+1 maximum elements.
             for j in range(len(arr)-1):
                 if(arr[j]>arr[j+1]):
                     arr[j],arr[j+1]=arr[j+1],arr[j]
+                    flag=1
+            if(flag==0):
+              break
         return arr
 
 
