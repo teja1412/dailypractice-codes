@@ -1,0 +1,19 @@
+# Selection sort is about sorting based on considering the minimum element and placing it in the crt index.
+# First loop is for the passes(n).
+# second loop is for selecting the minimum element and swapping it with the index of the first Loop.
+
+class Solution: 
+    def select(self, arr, i):
+        # code here 
+        return 0
+    def selectionSort(self, arr,n):
+        #code here
+        for i in range(n):
+            min=9999
+            for j in range(i,n):
+                if(arr[j]<min):
+                    min=arr[j]
+                    g=j
+            arr[g],arr[i]=arr[i],arr[g]
+        return arr
+
