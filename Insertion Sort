@@ -1,0 +1,12 @@
+class Solution:
+    def insertionSort(self, alist, n):
+        # First loop is being started by considereing the first element as sorted so starting from 2nd element(1). 
+        for i in range(1,len(alist)):
+            j=i-1
+            p=alist[i]
+            # second loop is to check for the place by moving the elements that are greateer than the current element.
+            while(j>-1 and alist[j]>p):
+                alist[j+1]=alist[j]
+                j-=1
+            alist[j+1]=p
+        return alist
