@@ -7,3 +7,7 @@ class Solution:
                 if(arr[j]>arr[j+1]):
                     arr[j],arr[j+1]=arr[j+1],arr[j]
         return arr
+
+
+# For i th pass we are getting i greatest elements. 
+# If we need a specific number of largest elements, then we can iterate the first loop that many number of times.
