@@ -1,3 +1,6 @@
+# In Insertion sort the approach is we consider two parts of array. 1) sorted part 2) unsorted part.
+# Initially we consider the first element to be sorted and thereon adding elements one by one to the sorted array by placing it in correct index.
+
 class Solution:
     def insertionSort(self, alist, n):
         # First loop is being started by considereing the first element as sorted so starting from 2nd element(1). 
