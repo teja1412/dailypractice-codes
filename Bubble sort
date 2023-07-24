@@ -1,0 +1,9 @@
+class Solution:
+    def bubbleSort(self,arr, n):
+        # n-1 passes will be required.
+        for i in range(n-1):
+            # In every iteration of j we get i+1 maximum elements.
+            for j in range(len(arr)-1):
+                if(arr[j]>arr[j+1]):
+                    arr[j],arr[j+1]=arr[j+1],arr[j]
+        return arr
