@@ -1,0 +1,39 @@
+def FindMin(dist,visited):
+  minimum=99999
+  for i in range(len(dist)):
+    if(visited[i]==False and dist[i]<minimum):
+      minimum=dist[i]
+      index=i
+  return index 
+  
+def FindMST(adj):
+  parent[0]=-1
+  dist[0]=0
+  # Initialization is done.
+  v=len(adj)
+
+  for i in range(v-1):
+
+    index=FindMin(dist,visited)
+    visited[index]=True
+    # Finding next element to be explored is done.
+    
+    for j in range(v):
+      if(adj[index][j]!=0 and visited[j]==False and dist[j]>adj[index][j]):
+        dist[j]=adj[index][j]
+        parent[j]=index 
+    # Relaxing corresponding to that ith vertex is done.
+ 
+  for i in range(1,v):
+    print("U->V: ",parent[i],"->",i,"wt= ",adj[parent[i]][i],"\n")
+
+  #Printing of MST is done.
+
+
+
+adj=[[0,4,6,0,0,0],[4,0,6,3,4,0],[6,6,0,1,0,0],[0,3,1,0,2,3],[0,4,0,2,0,7],[0,0,0,3,7,0]]
+parent=[0]*len(adj)
+dist=[9999]*len(adj)
+visited=[False]*len(adj)
+v=len(adj)
+FindMST(adj)
