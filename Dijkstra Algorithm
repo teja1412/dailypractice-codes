@@ -1,0 +1,22 @@
+adj=[[0,2,4,9999,9999,9999],[2,0,1,7,9999,9999],[4,1,0,9999,3,9999],[1,7,9999,0,2,1],[9999,9999,3,2,0,5],[9999,9999,9999,1,5,0]]
+
+
+dist=[0,9999,9999,9999,9999,9999]
+visited=[False]*len(adj)
+for i in range(len(adj)):
+  
+  minimum=99999
+  for j in range(len(dist)):
+    if(visited[j]==False and dist[j]<minimum):
+      minimum=dist[j]
+      index=dist.index(minimum)
+  visited[index]=True
+
+  # Finding the element with minimum distance is done.
+
+  for j in range(index+1,len(dist)):
+    if(adj[index][j]!=0 and adj[index][j]!=9999 and visited[j]==False and dist[j]>(dist[index]+adj[index][j])):
+      dist[j]=dist[index]+adj[index][j]
+  # Relaxing the elements adjacent to the minimum distance element.
+
+print(dist)
